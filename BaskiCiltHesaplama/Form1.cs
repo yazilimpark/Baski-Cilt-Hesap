@@ -28,7 +28,6 @@ namespace BaskiCiltHesaplama
         private void button1_Click(object sender, EventArgs e)
         {
             BaskiCiltPresenter presenter = new BaskiCiltPresenter(this);
-
             presenter.pMetod();
         }
     }
