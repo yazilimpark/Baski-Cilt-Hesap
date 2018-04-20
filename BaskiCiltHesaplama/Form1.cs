@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using BaskiCiltHesaplama.Views;
+using BaskiCiltHesaplama.Presenters;
 
 namespace BaskiCiltHesaplama
 {
@@ -20,9 +21,15 @@ namespace BaskiCiltHesaplama
             InitializeComponent();
         }
 
-        public string UzunlukVerisi { get => return GelenUzunluk; set => GelenUzunluk = value; }
-        public string GenislikVerisi { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string MalzemeVerisi { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string SonucAlani { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string UzunlukVerisi { get => GelenUzunluk.Text; set => GelenUzunluk.Text = value; }
+        public string GenislikVerisi { get => GelenUzunluk.Text; set => GelenUzunluk.Text = value; }
+        public string SonucAlani { get => GelenSonuc.Text; set => GelenSonuc.Text = value; }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BaskiCiltPresenter presenter = new BaskiCiltPresenter(this);
+
+            presenter.pMetod();
+        }
     }
 }

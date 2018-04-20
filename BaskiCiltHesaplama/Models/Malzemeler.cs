@@ -30,17 +30,11 @@ namespace BaskiCiltHesaplama.Models
 
         public double Hesapla()
         {
-            if (MalzemeListesi.Klise.ToString() == "Klise") {
+           
                 Uzunluk += 2;
                 Genislik += 2;
                 Hesap = Uzunluk * Genislik;
-            }
-            else
-            {
-                Hesap = 0;
-            }
-
-            return Hesap;
+                return Hesap;
             
         }
     }

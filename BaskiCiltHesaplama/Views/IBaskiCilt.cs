@@ -10,7 +10,7 @@ namespace BaskiCiltHesaplama.Views
     {
         string UzunlukVerisi { get; set; }
         string GenislikVerisi { get; set; }
-        string MalzemeVerisi { get; set; }
+        //string MalzemeVerisi { get; set; }
         string SonucAlani { get; set; }
     }
 }

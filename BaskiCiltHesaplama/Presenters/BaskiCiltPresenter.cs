@@ -13,6 +13,18 @@ namespace BaskiCiltHesaplama.Presenters
     {
         IBaskiCilt baskiCiltView;
 
-        
+        public BaskiCiltPresenter (IBaskiCilt view)
+	    {
+            baskiCiltView = view;
+	    }
+
+        public void pMetod () 
+        {
+            Malzemeler Cilt = new Malzemeler();
+
+            Cilt.Uzunluk = double.Parse(baskiCiltView.UzunlukVerisi);
+            Cilt.Genislik = double.Parse(baskiCiltView.GenislikVerisi);
+            baskiCiltView.SonucAlani = Cilt.Hesapla().ToString();
+        }
     }
 }
