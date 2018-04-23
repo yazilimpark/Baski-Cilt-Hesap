@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:hibernate-mapping-2.2" auto-import="true">
+    <class name="NHibernateExperiment.Malzemeler, NHibernateExperiment" lazy="true">
+        <id name="id">
+            <generator class="native"/>
+        </id>
+        <property name="malzeme" column="malzeme"/>
+        <property name="kayit" column="kayit">
+    </class>
+  
+</hibernate-mapping>

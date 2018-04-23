@@ -11,8 +11,11 @@ namespace BaskiCiltHesaplama.Models
         public double Uzunluk { get; set; }
         public double Genislik { get; set; }
         public double Hesap { get; set; }
+        public int id { get; set; }
+        public string malzeme { get; set; }
+        public string kayit { get; set; }
 
-        public enum MalzemeListesi
+        /*public enum MalzemeListesi
         {
             CiltBezi,
             Kagit,
@@ -25,7 +28,8 @@ namespace BaskiCiltHesaplama.Models
             Seraze,
             Iplik,
             TelDikis
-        }
+        }*/
+
 
 
         public double Hesapla()
